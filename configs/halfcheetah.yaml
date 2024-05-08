@@ -1,0 +1,31 @@
+project: 'decision_mamba'
+group: 'halfcheetah'
+name: 'baseline'
+
+env: 'halfcheetah'
+dataset: 'medium'
+dataset_dir: 'd4rl_data'
+
+context_len: 20
+n_layer: 3
+embed_dim: 128 
+activation_fn: 'gelu'
+dropout_p: 0.1
+conv_window_size: 6
+layer_norm_epsilon: 1e-5
+
+max_iters: 200
+batch_size: 64
+num_steps_per_iter: 100
+lr: 1e-3
+weight_decay: 1e-4
+warmup_steps: 10000
+num_eval_episodes: 10
+max_ep_len: 1000
+rtg_scale: 1000
+
+model_save_dir: 'models'
+device: 'cuda'
+train_seed: 10
+eval_seed: 42
+eval_interval: 20
